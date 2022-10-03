@@ -22,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        {/* // TODO: 테스트 */}
         <Counter />
         <Counter color="green" />
         <Counter color="blue" />
