@@ -13,7 +13,8 @@ const App = () => {
 
   return (
     <div>
-      Value : {state.value}
+      App Value : {state.value}
+      <br />
       <button onClick={() => dispatch(actionIncrement())}>INCREMENT</button>
       <button onClick={() => dispatch(actionDecrement())}>DECREMENT</button>
       <CounterContext.Provider value={{ state, dispatch }}>
@@ -43,20 +44,10 @@ const GameBox = () => {
 
   return (
     <div>
-      <button
-        onClick={() => {
-          dispatch(actionIncrement(3));
-        }}
-      >
-        Increment
-      </button>
-      <button
-        onClick={() => {
-          dispatch(actionDecrement(2));
-        }}
-      >
-        Decrement
-      </button>
+      GameBox Value : {state.value}
+      <br />
+      <button onClick={() => dispatch(actionIncrement(3))}>Increment</button>
+      <button onClick={() => dispatch(actionDecrement(2))}>Decrement</button>
     </div>
   );
 };
